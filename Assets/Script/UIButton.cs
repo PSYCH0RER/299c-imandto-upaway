@@ -7,21 +7,21 @@ public class UIButton : MonoBehaviour
     public void PlayGame()
     {
         // โหลด Scene 1 (Gameplay)
-        SceneManager.LoadSceneAsync(1);
+        SceneManager.LoadSceneAsync(2);
     }
 
     // ฟังก์ชันที่ใช้เมื่อกดปุ่ม MainMenu (กลับไปที่หน้า MainMenu)
     public void MainMenu()
     {
         // โหลด Scene 0 (MainMenu)
-        SceneManager.LoadSceneAsync(0);  
+        SceneManager.LoadSceneAsync(1);  
     }
 
     // ฟังก์ชันที่ใช้เมื่อกดปุ่ม Credits
     public void Credits()
     {
         // โหลด Scene Credits
-        SceneManager.LoadSceneAsync(2);  
+        SceneManager.LoadSceneAsync(3);  
     }
 
     // ฟังก์ชันที่ใช้เมื่อกดปุ่ม Exit

@@ -51,6 +51,6 @@ public class LoadSceneWithTimer : MonoBehaviour
     public void LoadTargetScene()
     {
         // โหลด Scene ที่คุณต้องการ (Scene 0 ในที่นี้)
-        SceneManager.LoadSceneAsync(0);
+        SceneManager.LoadSceneAsync(1);
     }
 }
