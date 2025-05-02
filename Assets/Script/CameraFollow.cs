@@ -8,13 +8,17 @@ public class CameraFollow : MonoBehaviour
 
     private void LateUpdate()
     {
-        // รับตำแหน่งของผู้เล่นในแนว Y-axis
-        Vector3 desiredPosition = new Vector3(transform.position.x, player.position.y, transform.position.z);
+        // ตรวจสอบว่า player ยังไม่ถูกทำลาย
+        if (player != null)
+        {
+            // รับตำแหน่งของผู้เล่นในแนว Y-axis
+            Vector3 desiredPosition = new Vector3(transform.position.x, player.position.y, transform.position.z);
 
-        // เคลื่อนที่กล้องไปยังตำแหน่งที่ต้องการด้วยการใช้ Lerp เพื่อให้สมูท
-        Vector3 smoothedPosition = Vector3.Lerp(transform.position, desiredPosition + offset, smoothSpeed);
-        
-        // กำหนดตำแหน่งใหม่ของกล้อง
-        transform.position = smoothedPosition;
+            // เคลื่อนที่กล้องไปยังตำแหน่งที่ต้องการด้วยการใช้ Lerp เพื่อให้สมูท
+            Vector3 smoothedPosition = Vector3.Lerp(transform.position, desiredPosition + offset, smoothSpeed);
+
+            // กำหนดตำแหน่งใหม่ของกล้อง
+            transform.position = smoothedPosition;
+        }
     }
 }

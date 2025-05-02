@@ -14,11 +14,8 @@ public class GameOverTrigger : MonoBehaviour
             // ทำให้ UI GAME OVER แสดงขึ้น
             gameOverUI.SetActive(true);
 
-            // หยุดการเคลื่อนที่หรือทำให้เกมหยุด
-            Time.timeScale = 0f;  // หยุดเกมชั่วคราว
-
-            // ถ้าต้องการให้เล่นใหม่อาจจะใช้การโหลดฉากใหม่หลังจากคลิกปุ่ม
-            // SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);  // โหลดฉากใหม่
+            // ทำลายผู้เล่นออกจาก Scene
+            Destroy(other.gameObject);  // ทำลาย GameObject ที่มี Tag "Player"
         }
     }
 }
